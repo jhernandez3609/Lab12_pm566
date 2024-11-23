@@ -7,7 +7,7 @@ html_document:
         toc_float: TRUE
 ---
 
-This is my PM566 Lab 12 website.
+This is my updated PM566 Lab 12 website.
 
 ## First Step
 
