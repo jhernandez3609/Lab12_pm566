@@ -1,6 +1,10 @@
 ---
 title: "Lab12"
 description: "A website for Lab 12 PM566 class at USC"
+author: "Jazmin Hernandez"
+html_document:
+        toc: TRUE
+        toc_float: TRUE
 ---
 
-
+This is my PM566 Lab 12 website.
