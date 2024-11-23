@@ -1,5 +1,6 @@
 ---
 title: "Lab12"
+description: "A website for Lab 12 PM566 class at USC"
 ---
 
 
