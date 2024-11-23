@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Lab12",
     "section": "",
-    "text": "This is my PM566 Lab 12 website."
+    "text": "This is my updated PM566 Lab 12 website."
   },
   {
     "objectID": "index.html#first-step",
@@ -14,18 +14,32 @@
     "text": "First Step\nSourcing necessary code process_COVID_data.R."
   },
   {
+    "objectID": "index.html#first-step-1",
+    "href": "index.html#first-step-1",
+    "title": "Lab12",
+    "section": "First step",
+    "text": "First step\nFirst I will source any necessary code, e.g. process_covid_data.R:\n\nsource(\"process_COVID_data.R\")"
+  },
+  {
     "objectID": "index.html#second-step",
     "href": "index.html#second-step",
     "title": "Lab12",
-    "section": "Second Step",
-    "text": "Second Step\nCreating the plotly figures.\n\np1_scatter &lt;- cv_states_today |&gt; \n  plot_ly(x = ~pop_density, y = ~deathsper100k,\n          type = 'scatter', mode = 'markers', color = ~state,\n          size = ~population, sizes = c(5, 70), marker = list(sizemode='diameter', opacity=0.5),\n          hoverinfo = 'text',\n          text = ~paste( paste(state, \":\", sep=\"\"), paste(\" Cases per 100k: \", per100k, sep=\"\") , paste(\" Deaths per 100k: \",\n                        deathsper100k, sep=\"\"), sep = \"&lt;br&gt;\")) |&gt;\n  layout(title = \"Population-normalized COVID-19 deaths vs. population density\",\n                  yaxis = list(title = \"Deaths per 100k\"), xaxis = list(title = \"Population Density\"),\n         hovermode = \"compare\")\n\n# filter out \"District of Columbia\"\ncv_states_today_scatter &lt;- cv_states_today |&gt; filter(state!=\"District of Columbia\")\n\np2_scatter &lt;- cv_states_today_scatter |&gt; \n  plot_ly(x = ~pop_density, y = ~deathsper100k,\n          type = 'scatter', mode = 'markers', color = ~state,\n          size = ~population, sizes = c(5, 70), marker = list(sizemode='diameter', opacity=0.5),\n          hoverinfo = 'text',\n          text = ~paste( paste(state, \":\", sep=\"\"), paste(\" Cases per 100k: \", per100k, sep=\"\") , paste(\" Deaths per 100k: \",\n                        deathsper100k, sep=\"\"), sep = \"&lt;br&gt;\")) |&gt;\n  layout(title = \"Population-normalized COVID-19 deaths vs. population density\",\n                  yaxis = list(title = \"Deaths per 100k\"), xaxis = list(title = \"Population Density\"),\n         hovermode = \"compare\")"
+    "section": "Second step",
+    "text": "Second step\nThen I will add some code to create the plotly figures\nNote: You need to name each code chunk, like this one: plot1\n\np1_scatter &lt;- cv_states_today %&gt;% \n  plot_ly(x = ~pop_density, y = ~deathsper100k,\n          type = 'scatter', mode = 'markers', color = ~state,\n          size = ~population, sizes = c(5, 70), marker = list(sizemode='diameter', opacity=0.5),\n          hoverinfo = 'text',\n          text = ~paste( paste(state, \":\", sep=\"\"), paste(\" Cases per 100k: \", per100k, sep=\"\") , paste(\" Deaths per 100k: \",\n                        deathsper100k, sep=\"\"), sep = \"&lt;br&gt;\")) %&gt;%\n  layout(title = \"Population-normalized COVID-19 deaths vs. population density\",\n                  yaxis = list(title = \"Deaths per 100k\"), xaxis = list(title = \"Population Density\"),\n         hovermode = \"compare\")\n\n# filter out \"District of Columbia\"\ncv_states_today_scatter &lt;- cv_states_today %&gt;% filter(state!=\"District of Columbia\")\n\np2_scatter &lt;- cv_states_today_scatter %&gt;% \n  plot_ly(x = ~pop_density, y = ~deathsper100k,\n          type = 'scatter', mode = 'markers', color = ~state,\n          size = ~population, sizes = c(5, 70), marker = list(sizemode='diameter', opacity=0.5),\n          hoverinfo = 'text',\n          text = ~paste( paste(state, \":\", sep=\"\"), paste(\" Cases per 100k: \", per100k, sep=\"\") , paste(\" Deaths per 100k: \",\n                        deathsper100k, sep=\"\"), sep = \"&lt;br&gt;\")) %&gt;%\n  layout(title = \"Population-normalized COVID-19 deaths vs. population density\",\n                  yaxis = list(title = \"Deaths per 100k\"), xaxis = list(title = \"Population Density\"),\n         hovermode = \"compare\")"
   },
   {
     "objectID": "index.html#third-step",
     "href": "index.html#third-step",
     "title": "Lab12",
     "section": "Third step",
-    "text": "Third step\nNow I will be creating tabs to display each figure.\n\nScatterplot: with DC\n\np1_scatter\n\n\n\n\n\n\n\nScatterplot: without DC\n\np2_scatter"
+    "text": "Third step\nCreate tabs to display each figure\n\nScatterplot: with DC\n\np1_scatter\n\n\n\n\n\n\n\nScatterplot: without DC\n\np2_scatter"
+  },
+  {
+    "objectID": "index.html#section",
+    "href": "index.html#section",
+    "title": "Lab12",
+    "section": "",
+    "text": "Done!"
   },
   {
     "objectID": "about.html",
